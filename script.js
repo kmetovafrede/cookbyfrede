@@ -6,10 +6,10 @@ translateButton.addEventListener("click", function() {
     // Toggle between English and Slovak
     if (translateButton.textContent === "English") {
         // Change the page to indexeu.html if the button is English
-        window.location.href = "../english/indexen.html";
+        window.location.href = "indexen.html";
     } else if (translateButton.textContent === "Slovak") {
         // Change the page to index.html if the button is Slovak
-        window.location.href = "../html/index.html";
+        window.location.href = "index.html";
     }
 });
 

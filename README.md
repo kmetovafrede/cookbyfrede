@@ -8,6 +8,7 @@ A cookbook web app for recepies from me living as a student.
 - Html
 - Css
 - Procreate
+- Nucleo
 
 ## <img src="img/readmeicons/window-pointer@2x.png" width="30" height="30"> Features
 

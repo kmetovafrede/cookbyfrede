@@ -1,0 +1,439 @@
+body {
+    background-image: url('../img/bg.png');
+    background-position: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3f0;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+header {
+    background-color: #e8bb9a;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background: black;
+}
+
+.image-container img {
+    width: 150px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1);
+}
+
+nav {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e8bb9a;
+    text-align: center;
+    width: 100%;
+    transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
+}
+
+.image-container:hover nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+
+nav button {
+    background-color: #eae7dc;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #ccc;
+}
+
+#mainSection {
+    position: relative;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 85%;
+}
+
+#mainSection h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mainSection a {
+    text-decoration: none;
+    color: #818181;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #ede3dc;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.29);
+}
+
+h2 {
+    border-bottom: 2px solid #e8bb9a;
+    padding-bottom: 0.5rem;
+    color: #818181;
+}
+
+.recipe-card {
+    background-color: #fff;
+    border: 1px solid #eae7dc;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Set 3 columns */
+    grid-gap: 20px;
+    overflow: hidden;
+}
+
+
+.recipe-item {
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #ede3dc;
+}
+
+
+.recipe-card h3 a {
+    color: #6f6f6f;
+    text-decoration: none;
+}
+
+#mainSection h3 a:hover {
+    color: #000000;
+}
+
+
+#mainSection h2 a:hover {
+    color: #000000;
+}
+
+
+#mainSection h2 a:hover span {
+    color: #000000;
+}
+
+
+.recipe-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe-item {
+    text-align: center; /* Center the content inside recipe items */
+}
+
+.logo-container {
+    margin-top: 20px; /* Add space between the recipe content and logos */
+}
+
+.logo-container img {
+    width: 20%; /* Set the width of each logo */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px; /* Add some space between logos */
+}
+
+footer {
+    background-color: #e8bb9a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+}
+
+/*------------------------------------- prvy recept-------------------------------------*/
+
+.heading-container h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 40px;
+}
+
+.icon-container img {
+    width: auto;
+    height: 80px;
+    margin-left: 10px;
+}
+
+
+#shoppingList, #howTo, #triky {
+    background-color: #ede3dc;
+    border-radius: 10px; /* Adjust the border-radius to make it more rounded */
+    padding: 20px; /* Add padding to increase the size */
+    margin-bottom: 3%;
+}
+
+/* Style checkboxes */
+#shoppingList input[type="checkbox"] {
+    /* Hide the default checkbox */
+    display: none;
+}
+
+/* Style labels to look like checkboxes */
+#shoppingList label {
+    display: inline-block;
+    margin-bottom: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Style labels when checkboxes are checked */
+#shoppingList input[type="checkbox"]:checked + label:before {
+    content: "\2713"; /* Unicode character for a checkmark */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #e8bb9a; /* Color when checked */
+    border-radius: 3px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+/* Style labels when checkboxes are unchecked */
+#shoppingList label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    background-color: white; /* Color when unchecked */
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: -25px;
+}
+
+/* Hover effect for labels */
+#shoppingList label:hover:before {
+    border-color: #e8bb9a; /* Change border color on hover */
+}
+
+/* Style the shopping list as a grid with three columns */
+#shoppingList ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    list-style: none;
+}
+
+#howTo h3 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the title */
+    font-size: 24px; /* Increase font size for the title */
+}
+
+#howTo ol {
+    padding-left: 0; /* Remove default padding */
+    list-style-type: none; /* Remove default list styling */
+}
+
+#howTo ol li {
+    display: flex; /* Display items in a row */
+    align-items: center; /* Center items vertically */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#howTo ol li img {
+    width: 100px; /* Set a fixed width for images */
+    height: 100px; /* Set a fixed height for images */
+    border-radius: 10px; /* Round the corners of the images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.511); /* Add a shadow to the images */
+    margin-right: 1%;
+}
+
+/* Specific styling for alternating list items */
+#howTo ol li:nth-child(odd) {
+    flex-direction: row; /* Default direction */
+}
+
+#howTo ol li:nth-child(even) {
+    flex-direction: row-reverse; /* Reverse direction for even items */
+}
+
+#howTo ol li:nth-child(even) img {
+    margin-left: 1%; /* Add a margin between the image and the text for even items */
+    margin-right: 0; /* Remove the right margin for even items */
+}
+
+#howTo ol li p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Increase font size for better readability */
+    max-width: 70%; /* Limit the width of the text */
+}
+
+/* Style labels to look like checkboxes */
+#howTo ol li input[type="checkbox"] {
+    display: none; /* Hide the default checkbox */
+}
+
+/* Style labels to look like checkboxes */
+#howTo ol li label {
+    display: inline-block;
+    margin-right: 40px; /* Increase the space between checkbox and text */
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle; /* Align checkboxes with text vertically */
+}
+
+/* Style labels when checkboxes are checked */
+#howTo ol li input[type="checkbox"]:checked + label:before {
+    content: "\2713"; /* Unicode character for a checkmark */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #e8bb9a; /* Color when checked */
+    border-radius: 3px;
+    color: white;
+    position: absolute;
+    top: 50%; /* Adjust position to vertically center the checkbox */
+    transform: translateY(-50%); /* Adjust position to vertically center the checkbox */
+    left: 10px;
+}
+
+/* Style labels when checkboxes are unchecked */
+#howTo ol li label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 20px;
+    background-color: white; /* Color when unchecked */
+    border-radius: 3px;
+    position: absolute;
+    top: 50%; /* Adjust position to vertically center the checkbox */
+    transform: translateY(-50%); /* Adjust position to vertically center the checkbox */
+    left: 10px;
+}
+
+/* Hover effect for labels */
+#howTo ol li label:hover:before {
+    border-color: #e8bb9a; /* Change border color on hover */
+}
+
+.dropdown {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 12px;
+    font-size: 15px; /* Inherit font size from parent (h2) */
+    font-family: inherit; /* Inherit font family from parent (h2) */
+    color: #818181;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+/* Adjust font for dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333333; /* Adjust font color as needed */
+}
+
+.dropdown-content a {
+    color: inherit; /* Inherit font color from parent (dropdown-content) */
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #e8bb9a;
+}
